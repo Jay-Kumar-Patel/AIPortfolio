@@ -1,4 +1,7 @@
 import { NextResponse } from 'next/server';
+import dotenv from "dotenv";
+
+dotenv.config();
 
 export async function POST(request) {
   try {
@@ -12,7 +15,7 @@ export async function POST(request) {
     }
 
     // Make the actual API call to your AI service
-    const apiResponse = await fetch('http://localhost:3001/api/ask', {
+    const apiResponse = await fetch(`${process.env.BACKEND_URL}/api/ask`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
