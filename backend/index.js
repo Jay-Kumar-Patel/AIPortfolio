@@ -1,5 +1,5 @@
 import { initialize } from "./embedding.js";
 
-//await initialize();
+await initialize();
 
 import "./api-server.js";
